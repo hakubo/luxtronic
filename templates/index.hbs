@@ -1,0 +1,20 @@
+<style>
+  .hello {
+    display: flex;
+    column-gap: 2rem;
+	  align-items: stretch;
+  }
+  .hello > * {
+    flex-direction: row;
+    margin: 0;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+  }
+</style>
+<div class="hello">
+  <img src='{{path}}/assets/icon_64.png' />
+  <h1>{{t 'welcome' name=title}}</h1>
+</div>
+<p>{{t 'example'}}</p>
