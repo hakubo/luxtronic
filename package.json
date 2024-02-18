@@ -1,6 +1,6 @@
 {
   "name": "loxberry-luxtronic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "dev": "nodemon --watch webfrontend/htmlauth --watch templates --exec 'node_modules/.bin/loxberryExpressDevServer' -- ./",
