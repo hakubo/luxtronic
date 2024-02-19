@@ -1,7 +1,9 @@
 {
-  "name": "loxberry-luxtronic",
-  "version": "0.0.1",
-  "author": "Jakub Olek",
-  "license": "APACHE 2.0",
-  "dependencies": {}
+    "name": "loxberry-luxtronic",
+    "version": "0.0.1",
+    "author": "Jakub Olek",
+    "license": "APACHE 2.0",
+    "dependencies": {
+        "luxtronik2": "2.7.1"
+    }
 }

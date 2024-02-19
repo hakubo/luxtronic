@@ -9,7 +9,7 @@ use CGI;
 # the express plugin.
 
 my $minRequiredVersion = "1.0.2";
-my $unvalidVersion = "2.0.0";
+my $unvalidVersion = "3.0.0";
 my $version = LoxBerry::System::pluginversion("express");
 my $plugin = LoxBerry::System::plugindata();
 
