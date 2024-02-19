@@ -3,6 +3,19 @@ const luxtronik = require("luxtronik2");
 const hostIp = "192.168.1.102";
 const pump = new luxtronik.createConnection(hostIp, 8889);
 
+function flattenObj(obj, parent, res = {}) {
+    for (let key in obj) {
+        let propName = parent ? parent + "." + key : key;
+        if (typeof obj[key] == "object") {
+            flattenObj(obj[key], propName, res);
+        } else {
+            res[propName] = obj[key];
+        }
+    }
+
+    return res;
+}
+
 module.exports = ({ router, loxberry }) => {
     router.get("/", (req, res) => {
         pump.read(function (err, data) {
@@ -12,7 +25,7 @@ module.exports = ({ router, loxberry }) => {
             }
 
             res.setHeader("Content-Type", "application/json");
-            res.end(JSON.stringify(data));
+            res.end(JSON.stringify(flattenObj(data)));
         });
     });
 
